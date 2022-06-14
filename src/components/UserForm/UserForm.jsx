@@ -9,6 +9,8 @@ const UserForm = () => {
     email: '',
   });
 
+  let usersInfo = JSON.parse(localStorage.getItem('USERS')) || [];
+
   const [btnDisabled, setBtnDisabled] = useState(true);
 
   const [message, setMessage] = useState('');
@@ -42,6 +44,17 @@ const UserForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     console.log('se lanza el formulario', data);
+    console.log(data.email);
+    // const users = [];
+    // users.push(data.username);
+    // console.log(users);
+    // let usuario = {
+    //   nombre: data.username,
+    //   email: data.email,
+    // };
+    // users.push(usuario);
+    // localStorage.setItem('users', JSON.stringify(users));
+    saveData();
     clearState();
     setMessage('formulario enviado con éxito');
 
@@ -49,6 +62,27 @@ const UserForm = () => {
       navigate('/');
     }, 3000);
   };
+
+  const saveData = () => {
+    usersInfo.push(data);
+    localStorage.setItem('USERS', JSON.stringify(usersInfo));
+  };
+
+  // const saveData = data => {
+  //   localStorage.setItem(
+  //     'user',
+  //     JSON.stringify({ username: data.username.value, email: data.email.value })
+  //   );
+  // };
+
+  // const saveData = (data) => {
+  //   let usuario = {
+  //     username: data.value,
+  //     email: email.value,
+  //   };
+  //   users.push(usuario);
+  //   localStorage.setItem('users', JSON.stringify(users));
+  // };
 
   return (
     <div className='container'>
