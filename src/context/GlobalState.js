@@ -5,7 +5,7 @@ import axios from 'axios';
 const initialState = {
   characters: [],
 };
-//quiero guardar personajes
+//quiero guardar personajes 'https://rickandmortyapi.com/api/character
 
 export const GlobalContext = createContext(initialState);
 
