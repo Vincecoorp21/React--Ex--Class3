@@ -13,7 +13,9 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   const getCharacters = async () => {
-    const res = await axios.get('https://rickandmortyapi.com/api/character');
+    const res = await axios.get(
+      'https://api.nytimes.com/svc/mostpopular/v2/shared/1/facebook.json?api-key=PIR8Pzhi0OdlMuxijvHLrhubbUNGefqq'
+    );
 
     dispatch({
       type: 'GET_CHARACTERS',

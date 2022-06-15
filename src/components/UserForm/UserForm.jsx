@@ -101,6 +101,14 @@ const UserForm = () => {
           onChange={handleInputChange}
           name='email'
         />
+        <input
+          type='text'
+          placeholder='location'
+          value={data.location}
+          onChange={handleInputChange}
+          name='location'
+        />
+        <textarea name="textarea" rows="10" cols="50" value={data.comment} onChange={handleInputChange}>Write something here</textarea>
 
         <button type='submit' disabled={btnDisabled}>
           Enviar
