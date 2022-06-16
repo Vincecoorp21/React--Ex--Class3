@@ -1,7 +1,7 @@
 import { useState } from 'react';
 //import { useNavigate } from 'react-router';
 import { useNavigate } from 'react-router-dom';
-import './UserForm.css';
+import './UserForm.scss';
 
 const UserForm = () => {
   const [data, setData] = useState({
@@ -89,26 +89,26 @@ const UserForm = () => {
       <form onSubmit={handleSubmit}>
         <input
           type='text'
-          placeholder='name'
+          placeholder='Name'
           value={data.username}
           onChange={handleInputChange}
           name='username'
         />
         <input
           type='email'
-          placeholder='email'
+          placeholder='Email'
           value={data.email}
           onChange={handleInputChange}
           name='email'
         />
         <input
           type='text'
-          placeholder='location'
+          placeholder='Location'
           value={data.location}
           onChange={handleInputChange}
           name='location'
         />
-        <textarea name="textarea" rows="10" cols="50" value={data.comment} onChange={handleInputChange}>Write something here</textarea>
+        <textarea name="textarea" rows="10" cols="50" value={data.comment} onChange={handleInputChange}>Hola</textarea>
 
         <button type='submit' disabled={btnDisabled}>
           Enviar

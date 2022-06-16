@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import UserForm from './components/UserForm/UserForm';
@@ -12,7 +12,6 @@ function App() {
       <BrowserRouter>
         <GlobalProvider>
           <Header />
-
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/user' element={<UserForm />} />
