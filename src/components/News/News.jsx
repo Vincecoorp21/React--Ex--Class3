@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { GlobalContext } from '../../context/GlobalState';
-import './Characters.scss';
+import './News.scss';
 
-const Characters = () => {
+const News = () => {
   const { characters, getCharacters } = useContext(GlobalContext);
   useEffect(() => {
     getCharacters();
@@ -26,9 +26,15 @@ const Characters = () => {
           </div>
           <div className='card-bottom'>
             <p>{character.abstract.substring(0, 100)}</p>
+
             <p>{character.byline}</p>
           </div>
-          <p className='date'>{character.published_date}</p>
+          <div className='card-link'>
+            <a href={character.url} target='_blank'>
+              Read more...
+            </a>
+            <p className='date'>{character.published_date}</p>
+          </div>
         </div>
       </article>
     );
@@ -36,4 +42,4 @@ const Characters = () => {
   return <div className='container-card'>{character}</div>;
 };
 
-export default Characters;
+export default News;

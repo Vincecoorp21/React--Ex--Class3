@@ -37,11 +37,14 @@ $font-primary: Montserrat;
         font-weight: 600;
         transition: 0.3s ease all;
       }
+      a:hover {
+        background-color: gold;
+        color: black;
+        height: 50px;
+        width: 180px;
+      }
     }
   }
-}
-a:hover {
-  background: #137c32;
 }
 
 .hola {

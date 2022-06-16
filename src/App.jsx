@@ -2,10 +2,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
-import UserForm from './components/UserForm/UserForm';
+import NewsForm from './components/NewsForm/NewsForm';
 import Footer from './components/Footer/Footer';
 import { GlobalProvider } from './context/GlobalState';
-import Characters from './components/Characters/Characters';
+
+import News from './components/News/News';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/user' element={<UserForm />} />
-            <Route path='/characters' element={<Characters />} />
+            <Route path='/sendnews' element={<NewsForm />} />
+            <Route path='/news' element={<News />} />
           </Routes>
           <Footer />
         </GlobalProvider>

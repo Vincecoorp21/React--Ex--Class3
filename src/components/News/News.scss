@@ -1,5 +1,5 @@
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 // $primary-color:rgb(196, 221, 255);
 // $button-primary:#241744;
 // $font-primary:Montserrat;
@@ -10,11 +10,12 @@
 }
 .container-card {
   width: 100%;
-  //max-width: 800px;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 20px auto;
-  //column-gap: 10px;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
 }
 
 /*********************/
@@ -49,19 +50,11 @@
 .card:hover {
   box-shadow: 0 8px 16px 0 var(--clr-primario-hover-vic);
 }
-// .card img {
-//   border-radius: 5px 5px 0 0;
-//   width: 100%;
-// }
 
 .card-header {
-  //display: flex;
-  //flex-direction: column;
   gap: 5px;
-
-  //align-items: baseline;
 }
-h3 {
+.titulo {
   margin-bottom: 20px;
   font-weight: bold;
   margin-top: 10px;
@@ -72,7 +65,18 @@ h3 {
   flex-direction: column;
   gap: 10px;
 }
-
-.date {
-  text-align: right;
+.card-link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+  }
 }

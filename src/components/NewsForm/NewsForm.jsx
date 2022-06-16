@@ -1,12 +1,14 @@
 import { useState } from 'react';
 //import { useNavigate } from 'react-router';
 import { useNavigate } from 'react-router-dom';
-import './UserForm.scss';
+import './NewsForm.scss';
 
 const UserForm = () => {
   const [data, setData] = useState({
     username: '',
     email: '',
+    location: '',
+    textarea: '',
   });
 
   let usersInfo = JSON.parse(localStorage.getItem('USERS')) || [];
@@ -20,6 +22,8 @@ const UserForm = () => {
   const initialState = {
     username: '',
     email: '',
+    location: '',
+    textarea: '',
   };
 
   const clearState = () => {
@@ -45,15 +49,7 @@ const UserForm = () => {
     e.preventDefault();
     console.log('se lanza el formulario', data);
     console.log(data.email);
-    // const users = [];
-    // users.push(data.username);
-    // console.log(users);
-    // let usuario = {
-    //   nombre: data.username,
-    //   email: data.email,
-    // };
-    // users.push(usuario);
-    // localStorage.setItem('users', JSON.stringify(users));
+
     saveData();
     clearState();
     setMessage('formulario enviado con éxito');
@@ -68,24 +64,9 @@ const UserForm = () => {
     localStorage.setItem('USERS', JSON.stringify(usersInfo));
   };
 
-  // const saveData = data => {
-  //   localStorage.setItem(
-  //     'user',
-  //     JSON.stringify({ username: data.username.value, email: data.email.value })
-  //   );
-  // };
-
-  // const saveData = (data) => {
-  //   let usuario = {
-  //     username: data.value,
-  //     email: email.value,
-  //   };
-  //   users.push(usuario);
-  //   localStorage.setItem('users', JSON.stringify(users));
-  // };
-
   return (
     <div className='container'>
+      <h1>Send News...</h1>
       <form onSubmit={handleSubmit}>
         <input
           type='text'
