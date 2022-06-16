@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+$primary-color: rgb(196, 221, 255);
+$button-primary: #241744;
+$font-primary: Montserrat;
+
+.footer {
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+.nav-footer {
+  display: flex;
+  justify-content: space-around;
+  a {
+    all: unset;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    background: $button-primary;
+    color: #fff;
+    border-radius: 100px;
+    font-family: $font-primary;
+    font-weight: 600;
+    transition: 0.3s ease all;
+  }
+}

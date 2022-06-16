@@ -1,20 +1,24 @@
 import React from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/daily_planet.png';
 
 const Header = () => {
   return (
     <nav className='header'>
-      <div class="hola">
-        <span>
-          <Link to='/'>Home</Link>
-        </span>
-        <span>
-          <Link to='/user'>UserForm</Link>
-        </span>
-        <span>
-          <Link to='/characters'>Characters</Link>
-        </span>
+      <div class='hola'>
+        <img src={logo} alt='' />
+        <div className='links-header'>
+          <span>
+            <Link to='/'>Home</Link>
+          </span>
+          <span>
+            <Link to='/user'>Send News</Link>
+          </span>
+          <span>
+            <Link to='/characters'>Get News</Link>
+          </span>
+        </div>
       </div>
     </nav>
   );

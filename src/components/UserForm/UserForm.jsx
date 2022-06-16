@@ -108,10 +108,16 @@ const UserForm = () => {
           onChange={handleInputChange}
           name='location'
         />
-        <textarea name="textarea" rows="10" cols="50" value={data.comment} onChange={handleInputChange}>Hola</textarea>
+        <textarea
+          name='textarea'
+          rows='10'
+          cols='50'
+          value={data.comment}
+          onChange={handleInputChange}
+        ></textarea>
 
         <button type='submit' disabled={btnDisabled}>
-          Enviar
+          Submit
         </button>
         {message}
       </form>
