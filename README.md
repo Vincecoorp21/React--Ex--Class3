@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# NYTimes News APP with React
 
 The main objective of this project is to create an app that launches queries to the New York Times News API [NewsAPI](https://developer.nytimes.com/apis). This project was built with React & Axios, and we have styled it with SASS.
 
