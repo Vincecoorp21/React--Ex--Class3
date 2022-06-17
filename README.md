@@ -41,9 +41,9 @@ npm start
 
 ## Preview
 
-![foto](./assets/main.png)
-![foto](./assets/form.png)
-![foto](./assets/search.png)
+![foto](./assets/main.jpg)
+![foto](./assets/form.jpg)
+![foto](./assets/search.jpg)
 
 ## Author
 
