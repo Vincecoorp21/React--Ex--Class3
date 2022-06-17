@@ -4,6 +4,12 @@ The main objective of this project is to create an app that launches queries to 
 
 It has been built in a responsive development.
 
+The project contains 3 sections:
+
+- Home
+- Send news
+- Get Latest News
+
 ## Built with....
 
 This project was developed with the following technologies:
@@ -34,6 +40,10 @@ npm start
 ```
 
 ## Preview
+
+![foto](./assets/main.png)
+![foto](./assets/form.png)
+![foto](./assets/search.png)
 
 ## Author
 
