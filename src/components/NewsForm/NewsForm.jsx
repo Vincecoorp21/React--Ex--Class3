@@ -36,8 +36,8 @@ const UserForm = () => {
       [event.target.name]: event.target.value,
     });
 
-    if (data.username.length < 3) {
-      setMessage('Name must be at least 3 characters');
+    if (data.username.length < 5) {
+      setMessage('News Title must be at least 5 characters');
       setBtnDisabled(true);
     } else {
       setMessage(null);
@@ -70,7 +70,7 @@ const UserForm = () => {
       <form onSubmit={handleSubmit}>
         <input
           type='text'
-          placeholder='Name'
+          placeholder='News Title'
           value={data.username}
           onChange={handleInputChange}
           name='username'
@@ -95,6 +95,7 @@ const UserForm = () => {
           cols='50'
           value={data.comment}
           onChange={handleInputChange}
+          placeholder='Description'
         ></textarea>
 
         <button type='submit' disabled={btnDisabled}>
